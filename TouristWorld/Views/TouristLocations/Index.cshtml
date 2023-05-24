@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Tourist locations</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-warning">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -40,12 +40,12 @@
                 @Html.DisplayFor(modelItem => item.Country)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LocationImage)
+             <img src="@Html.DisplayFor(modelItem => item.LocationImage)" height="100" width="200"  style="border-radius:50px"/>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PlaceId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PlaceId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PlaceId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.PlaceId" class="btn btn-info">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PlaceId" class="btn btn-primary">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PlaceId" class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }
